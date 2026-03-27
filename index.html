@@ -2,55 +2,42 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Hướng dẫn sử dụng - Quản lý Sổ Tiết Kiệm</title>
+    <title>Hướng Dẫn Sử Dụng - Quản Lý Tiền Gửi</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; color: #333; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; }
-        h2 { color: #e67e22; margin-top: 30px; }
-        .function-box { background: #f9f9f9; border-left: 5px solid #3498db; padding: 15px; margin: 10px 0; }
-        code { background: #eee; padding: 2px 5px; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; padding: 25px; color: #333; max-width: 900px; margin: auto; background-color: #f4f4f4; }
+        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 20px; border-left: 5px solid #2980b9; padding-left: 10px; }
+        .step { margin-bottom: 15px; padding: 10px; background: #eef7fa; border-radius: 5px; }
+        .warning { color: #e74c3c; font-weight: bold; }
     </style>
 </head>
 <body>
-    <h1>HỆ THỐNG QUẢN LÝ TIỀN GỬI TIẾT KIỆM</h1>
-    <p>Chào mừng bạn đến với hệ thống hỗ trợ khách hàng và nhân viên ngân hàng.</p>
+    <div class="container">
+        <h1>CẨM NANG HƯỚNG DẪN SỬ DỤNG</h1>
+        
+        <h2>1. Đăng nhập & Truy cập</h2>
+        <div class="step">
+            <p>- <b>Quyền Admin:</b> Quản lý toàn bộ hệ thống và giao dịch.</p>
+            <p>- <b>Quyền Nhân viên:</b> Thực hiện các nghiệp vụ hằng ngày cho khách hàng.</p>
+        </div>
 
-    <h2>1. Chức năng Đăng nhập & Phân quyền</h2>
-    <div class="function-box">
-        <ul>
-            <li><b>Admin:</b> Toàn quyền quản lý hệ thống, nhân viên và xem báo cáo giao dịch.</li>
-            <li><b>Nhân viên:</b> Thực hiện nghiệp vụ mở sổ, gửi tiền và rút tiền cho khách hàng.</li>
-        </ul>
+        <h2>2. Nghiệp vụ Sổ Tiết Kiệm</h2>
+        <div class="step">
+            <p>- <b>Mở sổ:</b> Nhập Mã sổ, chọn Khách hàng và Số tiền gửi ban đầu.</p>
+            <p>- <b>Tư vấn:</b> Chọn Kỳ hạn gửi để hệ thống tự áp dụng Lãi suất chính xác nhất.</p>
+        </div>
+
+        <h2>3. Giao dịch Gửi/Rút tiền</h2>
+        <div class="step">
+            <p>- <b>Gửi thêm:</b> Nạp thêm tiền vào sổ tiết kiệm hiện có.</p>
+            <p>- <b>Rút tiền:</b> <span class="warning">Lưu ý:</span> Không thể rút số tiền lớn hơn số dư hiện tại của sổ.</p>
+        </div>
+
+        <h2>4. Báo cáo & In ấn</h2>
+        <div class="step">
+            <p>- Sử dụng chức năng <b>In Biên Lai</b> sau mỗi giao dịch và <b>Xuất Excel</b> để lưu trữ dữ liệu hàng tháng.</p>
+        </div>
     </div>
-
-    <h2>2. Quản lý Sổ tiết kiệm</h2>
-    <div class="function-box">
-        <p>Truy cập vào menu <b>Sổ tiết kiệm</b> để thực hiện:</p>
-        <ul>
-            <li><b>Thêm mới:</b> Nhập thông tin khách hàng, số tiền gửi ban đầu và kỳ hạn.</li>
-            <li><b>Tính lãi:</b> Hệ thống tự động tính lãi suất dựa trên kỳ hạn đã chọn.</li>
-            <li><b>Xuất Excel:</b> Lưu danh sách sổ tiết kiệm ra file Excel để báo cáo.</li>
-        </ul>
-    </div>
-
-    <h2>3. Nghiệp vụ Giao dịch (Gửi/Rút tiền)</h2>
-    <div class="function-box">
-        <p>Để đảm bảo tính chính xác, nghiệp vụ được chia làm 2 phần:</p>
-        <ul>
-            <li><b>Gửi tiền:</b> Chọn mã sổ và nhập số tiền cần gửi thêm.</li>
-            <li><b>Rút tiền:</b> Kiểm tra số dư hiện tại trước khi thực hiện lệnh rút.</li>
-        </ul>
-    </div>
-
-    <h2>4. Báo cáo & Thống kê</h2>
-    <div class="function-box">
-        <p>Sử dụng công nghệ <b>RDLC Report</b> để in ấn:</p>
-        <ul>
-            <li>In biên lai giao dịch ngay sau khi thực hiện gửi/rút.</li>
-            <li>Thống kê danh sách khách hàng và nhân viên theo định kỳ.</li>
-        </ul>
-    </div>
-
-    <p style="text-align: center; margin-top: 50px; font-style: italic;">Nhấn <b>F1</b> tại các ô nhập liệu trong phần mềm để xem hướng dẫn nhanh.</p>
 </body>
 </html>
