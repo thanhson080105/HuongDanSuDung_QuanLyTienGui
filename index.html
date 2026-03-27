@@ -3,121 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hệ Thống Quản Lý Tiền Gửi Tiết Kiệm - Tài Liệu Hướng Dẫn</title>
+    <title>Trung Tâm Hỗ Trợ Khách Hàng - Hệ Thống Quản Lý Tiền Gửi</title>
     <style>
-        :root { --primary: #0056b3; --secondary: #2c3e50; --accent: #e74c3c; --bg: #f8f9fa; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; margin: 0; background: var(--bg); }
+        :root { --main-blue: #003366; --light-blue: #e6f2ff; --accent: #ff9900; --text: #2d3436; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.8; color: var(--text); margin: 0; background-color: #fcfcfc; }
         
-        /* Header */
-        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 60px 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); }
-        header h1 { margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; }
-        
-        .container { max-width: 1100px; margin: -50px auto 50px; padding: 0 20px; }
-        
-        /* Card Style */
-        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px; border-top: 5px solid var(--primary); }
-        
-        h2 { color: var(--primary); display: flex; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        
-        /* Grid Layout */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .feature-item { border: 1px dashed #ccc; padding: 15px; border-radius: 10px; transition: 0.3s; }
-        .feature-item:hover { border-color: var(--primary); background: #f0f7ff; }
+        /* Header chuyên nghiệp */
+        header { background: var(--main-blue); color: white; padding: 40px 20px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        header h1 { margin: 0; font-size: 28px; letter-spacing: 1px; }
+        header p { opacity: 0.9; margin-top: 10px; font-weight: 300; }
 
-        /* Status Tags */
-        .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8em; font-weight: bold; margin-bottom: 10px; }
-        .tag-admin { background: #ffebee; color: #c62828; }
-        .tag-staff { background: #e3f2fd; color: #1565c0; }
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        
+        /* Các khối nội dung */
+        .manual-section { background: white; border-radius: 12px; padding: 35px; margin-bottom: 30px; border: 1px solid #eee; transition: transform 0.2s; }
+        .manual-section:hover { box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        
+        h2 { color: var(--main-blue); border-left: 6px solid var(--accent); padding-left: 15px; margin-bottom: 25px; font-size: 22px; }
+        h3 { color: #0984e3; margin-top: 20px; }
 
-        .important-note { background: #fff3cd; border-left: 6px solid #ffecb5; padding: 20px; border-radius: 5px; margin: 20px 0; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 20px; }
+        .feature-card { background: var(--light-blue); padding: 20px; border-radius: 10px; border-bottom: 3px solid #0056b3; }
         
-        footer { text-align: center; padding: 40px; color: #7f8c8d; font-size: 0.9em; }
-        
-        /* Table for Hotkeys */
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background: #f2f2f2; }
+        .alert-box { background: #fff3cd; border: 1px solid #ffeeba; color: #856404; padding: 15px; border-radius: 8px; margin: 20px 0; display: flex; align-items: center; }
+        .alert-box::before { content: "⚠️"; margin-right: 10px; font-size: 20px; }
+
+        /* Bảng phím tắt */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; }
+        th, td { padding: 15px; border: 1px solid #ddd; text-align: left; }
+        th { background: #f8f9fa; color: var(--main-blue); }
+
+        footer { text-align: center; padding: 50px 20px; background: #eee; color: #636e72; font-size: 14px; }
+        .highlight { color: #d63031; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>HỆ THỐNG QUẢN LÝ TIỀN GỬI v2.0</h1>
-    <p>Cổng thông tin hướng dẫn nghiệp vụ dành cho Ngân hàng và Khách hàng</p>
+    <h1>CỔNG THÔNG TIN HỖ TRỢ NGHIỆP VỤ</h1>
+    <p>Giải pháp Quản lý Tiết kiệm & Tài chính Ngân hàng toàn diện</p>
 </header>
 
 <div class="container">
-    
-    <div class="card">
-        <h2>01. Tổng quan hệ thống</h2>
-        <p>Phần mềm <b>Quản lý Tiền gửi Tiết kiệm</b> được xây dựng trên nền tảng .NET WinForms, kết hợp với SQL Server và Entity Framework. Hệ thống giúp tối ưu hóa quy trình quản lý sổ tiết kiệm, tính toán lãi suất chính xác và bảo mật dữ liệu khách hàng.</p>
-        <div class="grid">
-            <div class="feature-item">
-                <h3>Phân quyền Admin</h3>
-                <span class="tag tag-admin">Quản trị tối cao</span>
-                <p>Quản lý danh sách nhân viên, cấu hình tham số lãi suất hệ thống và theo dõi nhật ký giao dịch toàn ngân hàng.</p>
+
+    <div class="manual-section">
+        <h2>I. Tổng quan Hệ thống</h2>
+        <p>Hệ thống Quản lý Tiền gửi là nền tảng chuyên dụng giúp tối ưu hóa việc quản trị danh mục sổ tiết kiệm, thực hiện giao dịch gửi/rút tiền và tính toán lãi suất chính xác theo thời gian thực.</p>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <b>An toàn dữ liệu</b>
+                <p>Mọi giao dịch đều được lưu vết chi tiết và đối soát định kỳ trên cơ sở dữ liệu tập trung.</p>
             </div>
-            <div class="feature-item">
-                <h3>Phân quyền Nhân viên</h3>
-                <span class="tag tag-staff">Giao dịch viên</span>
-                <p>Thực hiện các thao tác mở sổ, gửi/rút tiền, in biên lai và hỗ trợ tra cứu thông tin khách hàng nhanh chóng.</p>
+            <div class="feature-card">
+                <b>Nghiệp vụ linh hoạt</b>
+                <p>Hỗ trợ đa dạng các loại kỳ hạn, từ không kỳ hạn đến các gói tiết kiệm dài hạn từ 1-36 tháng.</p>
             </div>
         </div>
     </div>
 
-    <div class="card">
-        <h2>02. Quy trình Nghiệp vụ chuẩn</h2>
+    <div class="manual-section">
+        <h2>II. Hướng dẫn Nghiệp vụ chính</h2>
         
-        <h3>A. Quản lý Sổ tiết kiệm</h3>
+        <h3>1. Khởi tạo Sổ tiết kiệm mới</h3>
+        <p>Để mở sổ cho khách hàng, nhân viên giao dịch thực hiện các bước sau:</p>
         <ul>
-            <li><b>Mở sổ mới:</b> Kiểm tra CMND/CCCD -> Chọn kỳ hạn -> Nhập số tiền gửi ban đầu (Tối thiểu 100,000đ).</li>
-            <li><b>Tính lãi:</b> Hệ thống tự động truy xuất bảng lãi suất hiện hành để áp dụng cho khách hàng.</li>
+            <li>Chọn <b>Thông tin Khách hàng</b> (đối với khách hàng cũ) hoặc thêm mới khách hàng vào hệ thống.</li>
+            <li>Nhập <b>Số tiền gốc</b> và chọn <b>Kỳ hạn gửi</b> phù hợp với nhu cầu khách hàng.</li>
+            <li>Hệ thống sẽ tự động hiển thị <b>Mức lãi suất</b> tương ứng. Nhấn <b>Lưu</b> để hoàn tất in biên lai mở sổ.</li>
         </ul>
 
-        <h3>B. Thực hiện Giao dịch</h3>
-        <p>Hệ thống hỗ trợ 2 loại giao dịch chính:</p>
-        <div class="important-note">
-            <b>1. Giao dịch Nạp tiền:</b> Số tiền nạp sẽ được cộng trực tiếp vào gốc. Lưu ý: Chỉ áp dụng cho sổ không kỳ hạn.<br>
-            <b>2. Giao dịch Rút tiền:</b> Hệ thống kiểm tra điều kiện rút trước hạn hoặc đúng hạn để tính lãi suất thực tế.
+        <h3>2. Giao dịch Nạp/Rút tiền</h3>
+        <p>Mọi biến động số dư cần tuân thủ quy trình kiểm soát chặt chẽ:</p>
+        <div class="alert-box">
+            <b>Lưu ý quan trọng:</b> Giao dịch rút tiền chỉ thực hiện thành công khi số tiền yêu cầu không vượt quá số dư khả dụng hiện tại trong sổ.
         </div>
-    </div>
-
-    <div class="card">
-        <h2>03. Hỗ trợ Kỹ thuật & Phím tắt</h2>
-        <table>
-            <tr>
-                <th>Phím tắt</th>
-                <th>Chức năng</th>
-            </tr>
-            <tr>
-                <td><b>F1</b></td>
-                <td>Mở trang tài liệu hướng dẫn này ngay lập tức từ phần mềm.</td>
-            </tr>
-            <tr>
-                <td><b>Alt + F4</b></td>
-                <td>Thoát ứng dụng một cách an toàn.</td>
-            </tr>
-            <tr>
-                <td><b>Ctrl + P</b></td>
-                <td>Mở nhanh giao diện In báo cáo/Biên lai giao dịch.</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="card">
-        <h2>04. Báo cáo & Kết xuất dữ liệu</h2>
-        <p>Để phục vụ công tác kiểm toán, hệ thống cung cấp công cụ mạnh mẽ:</p>
         <ul>
-            <li><b>Microsoft Report (RDLC):</b> In ấn trực tiếp các loại phiếu thu, phiếu chi có đầy đủ chữ ký.</li>
-            <li><b>Export Excel:</b> Kết xuất toàn bộ danh sách sổ tiết kiệm theo định dạng file .xlsx để xử lý dữ liệu ngoại tuyến.</li>
+            <li><span class="highlight">Rút trước hạn:</span> Hệ thống sẽ tự động áp dụng lãi suất không kỳ hạn theo quy định hiện hành.</li>
+            <li><span class="highlight">Rút đúng hạn:</span> Khách hàng hưởng trọn vẹn lãi suất cam kết tại thời điểm mở sổ.</li>
         </ul>
+    </div>
+
+    <div class="manual-section">
+        <h2>III. Báo cáo & Lưu trữ</h2>
+        <p>Nhằm phục vụ công tác kiểm soát nội bộ và lưu trữ chứng từ cho khách hàng:</p>
+        <ul>
+            <li><b>In Biên lai:</b> Hệ thống hỗ trợ in phiếu thu/chi ngay sau khi giao dịch kết thúc.</li>
+            <li><b>Xuất dữ liệu Excel:</b> Hỗ trợ quản lý báo cáo định kỳ theo ngày/tháng bằng cách kết xuất danh sách giao dịch ra định dạng bảng tính chuyên dụng.</li>
+        </ul>
+    </div>
+
+    <div class="manual-section">
+        <h2>IV. Phím tắt Hỗ trợ nhanh</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Phím tắt</th>
+                    <th>Chức năng sử dụng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>F1</strong></td>
+                    <td>Mở ngay trung tâm hỗ trợ này từ bất kỳ vị trí nào trong ứng dụng.</td>
+                </tr>
+                <tr>
+                    <td><strong>Esc</strong></td>
+                    <td>Đóng các cửa sổ giao dịch đang mở.</td>
+                </tr>
+                <tr>
+                    <td><strong>Ctrl + S</strong></td>
+                    <td>Lưu nhanh dữ liệu vừa nhập vào hệ thống.</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </div>
 
 <footer>
-    <p>&copy; 2026 Dự án Quản lý Tiền gửi Tiết kiệm - Thực hành Buổi 10 (IMS501)</p>
-    <p>Phát triển bởi: Nguyễn Thành Sơn</p>
+    <p>Bản quyền thuộc về Hệ Thống Quản Lý Tài Chính &copy; 2026. Mọi quyền được bảo lưu.</p>
+    <p>Hotline Hỗ trợ Kỹ thuật: 1900 xxxx | Email: support@finance-system.com</p>
 </footer>
 
 </body>
